@@ -41,3 +41,14 @@ def post_detail_view(request, id):
         }
 
         return render(request, 'posts/detail.html', context=context_data)
+
+def post_create_view(request):
+    if request.method == 'GET':
+        context_data = {
+
+        }
+
+        return render(request, "posts/create.html", context=context_data)
+
+    if request.method == "POST":
+        print(request.POST)
